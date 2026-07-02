@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+<p>
+    <a href="/nova">➕ Nova Receita</a>
+</p>
+
+<table border="1" cellpadding="8">
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Categoria</th>
+        <th>Ações</th>
+    </tr>
+
+    {% for receita in receitas %}
+    <tr>
+        <td>{{ receita.id }}</td>
+        <td>{{ receita.nome }}</td>
+        <td>{{ receita.categoria.nome }}</td>
+        <td>
+            <a href="/editar/{{ receita.id }}">Editar</a> |
+            <a href="/excluir/{{ receita.id }}">Excluir</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

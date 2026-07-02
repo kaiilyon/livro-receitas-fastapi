@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+<h2>
+{% if receita %}
+Editar Receita
+{% else %}
+Nova Receita
+{% endif %}
+</h2>
+
+<form action="/salvar" method="post">
+
+    {% if receita %}
+    <input type="hidden" name="id" value="{{ receita.id }}">
+    {% endif %}
+
+    <label>Nome</label><br>
+    <input type="text" name="nome"
+           value="{{ receita.nome if receita else '' }}"><br><br>
+
+    <label>Ingredientes</label><br>
+    <textarea name="ingredientes">{{ receita.ingredientes if receita else '' }}</textarea><br><br>
+
+    <label>Modo de preparo</label><br>
+    <textarea name="modo_preparo">{{ receita.modo_preparo if receita else '' }}</textarea><br><br>
+
+    <label>Categoria</label><br>
+
+    <select name="categoria_id">
+        {% for categoria in categorias %}
+        <option value="{{ categoria.id }}"
+        {% if receita and receita.categoria_id == categoria.id %}
+            selected
+        {% endif %}>
+            {{ categoria.nome }}
+        </option>
+        {% endfor %}
+    </select>
+
+    <br><br>
+
+    <button type="submit">Salvar</button>
+
+</form>
+
+{% endblock %}
