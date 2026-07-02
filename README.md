@@ -111,26 +111,3 @@ http://127.0.0.1:8000
 ## 📷 Observação
 
 Projeto desenvolvido em ambiente **GitHub Codespaces**, garantindo execução sem instalação local.
-
----
-
-## 🏁 Status
-
-✔ Projeto concluído e funcional
-```
-
----
-
-# 🚀 Se quiser deixar AINDA melhor (nível 10+)
-
-Posso melhorar seu README com:
-
-- 📸 :contentReference[oaicite:0]{index=0}
-- 🎥 :contentReference[oaicite:1]{index=1}
-- 🏷️ :contentReference[oaicite:2]{index=2}
-- 🌐 :contentReference[oaicite:3]{index=3}
-- ✨ :contentReference[oaicite:4]{index=4}
-
-Só fala:
-👉 **“quero README nível portfólio profissional”**
-````
