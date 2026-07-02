@@ -1,12 +1,5 @@
-Claro — vou te entregar um **README.md pronto, bonito e profissional**, já no nível de entrega de trabalho mesmo.
+ — Livro de Receitas (FastAPI + Supabase)
 
-Você só copia e cola no seu projeto.
-
----
-
-# 📄 README.md — Livro de Receitas (FastAPI + Supabase)
-
-```md
 # 📖 Livro de Receitas — CRUD Full-Stack
 
 Projeto desenvolvido como trabalho prático da disciplina **Tecnologias Emergentes**.
