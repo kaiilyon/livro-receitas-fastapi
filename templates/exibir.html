@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+<div class="receita-container">
+
+    <div class="receita-header">
+        <h2>{{ receita.nome }}</h2>
+
+        <span class="categoria-badge">
+            🍽 {{ receita.categoria.nome }}
+        </span>
+    </div>
+
+    <div class="cards-receita">
+
+        <div class="card-info">
+            <div class="icone">🥕</div>
+
+            <h3>Ingredientes</h3>
+
+            <div class="conteudo-card">
+                {{ receita.ingredientes }}
+            </div>
+        </div>
+
+        <div class="card-info">
+            <div class="icone">👨‍🍳</div>
+
+            <h3>Modo de preparo</h3>
+
+            <div class="conteudo-card">
+                {{ receita.modo_preparo }}
+            </div>
+        </div>
+
+    </div>
+
+    <div class="acoes-receita">
+        <a href="/" class="btn voltar">⬅ Voltar</a>
+
+        <a href="/editar/{{ receita.id }}" class="btn editar">
+            ✏ Editar
+        </a>
+
+        <a href="/excluir/{{ receita.id }}" class="btn excluir">
+            🗑 Excluir
+        </a>
+    </div>
+
+</div>
+
+{% endblock %}

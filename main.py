@@ -122,3 +122,25 @@ def editar(
             "categorias": categorias,
         },
     )
+
+@app.get("/exibir/{receita_id}")
+def exibir(
+    receita_id: int,
+    request: Request,
+    session: Session = Depends(get_session),
+):
+    receita = (
+        session.query(models.Receita)
+        .options(joinedload(models.Receita.categoria))
+        .filter(models.Receita.id == receita_id)
+        .first()
+    )
+
+    return templates.TemplateResponse(
+        request=request,
+        name="exibir.html",
+        context={
+            "request": request,
+            "receita": receita,
+        },
+    )
